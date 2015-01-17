@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+	<head>
+		<style type="text/css">
+			li{margin-bottom: 10px};
+		</style>
+	</head>
+	
+	<body style="font-family: Arial">
+		<div class="container">
+			<h1>Mock data for Front-end development</h1>
+			<p>By Thien Nguyen &lt;nguyenphongthien@gmail.com&gt;</p>
+			<nomock>
+			<ul>
+				<li>
+					<h2>Step 1: Include mock.js to file script</h2>
+				</li>
+				<li>
+					<h2>Step 2: Add mock data:</h2>
+					<ul style="list-style-type: none">
+						<li>Simply add ~datatype~ anywhere we want to use mock data, e.g:</li>
+						<li>&lt;div&gt;~s:10,50~&lt;/div&gt;</li>
+						<li><strong>NOTE</strong>: Every mock data have to be wrapped in a "mock" class, if you want to use this in all the page, just simply add class "mock" to the body tag</li>
+						<li>(eg: &lt;span class="mock"&gt;~s:40,100~&lt;/span&gt;)</li>
+					</ul>
+				</li>
+				<li>
+					<h2>Mock data usage:</h2>
+					<p>All the examples below will be used this plugin as when you refresh the page, you'll see the different result. Try it!</p>
+					<ul>
+						<li>
+							<h3>Name</h3>
+							<ul>
+								<li>
+									name: <strong>~nm~</strong><br>
+									<span class="mock">(eg: "~nm~")</span>
+								</li>
+								<li>
+									male name: <strong>~nm:m~</strong><br>
+									<span class="mock">(eg: "~nm:m~")</span>
+								</li>
+								<li>
+									female name: <strong>~nm:f~</strong><br>
+									<span class="mock">(eg: "~nm:f~")</span>
+								</li>
+								<li>
+									firstname: <strong>~fnm~</strong><br>
+									<span class="mock">(eg: "~fnm~")</span>
+								</li>
+								<li>
+									male firstname: <strong>~fnm:m~</strong><br>
+									<span class="mock">(eg: "~fnm:m~")</span>
+								</li>
+								<li>
+									female firstname: <strong>~fnm:f~</strong><br>
+									<span class="mock">(eg: "~fnm:f~")</span>
+								</li>
+								<li>
+									lastname: <strong>~lnm~</strong><br>
+									<span class="mock">(eg: "~lnm~")</span>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<h3>String</h3>
+							<ul>
+								<li>
+									string with exact length: <strong>~s:length~</strong><br>
+									(eg: ~s:100~ => <span class="mock">"~s:100~"</span>)
+								</li>
+								<li>
+									string with random length: <strong>~s:min_length,max_length~</strong><br>
+									(eg: ~s:100,300~ => <span class="mock">"~s:100,300~"</span>)
+								</li>
+							</ul>
+							
+						</li>
+						<li>
+							<h3>Image</h3>
+							<ul>
+								<li>
+									image with exact width, exact height:
+									<strong>~i:width|height~</strong><br>
+									(eg: ~i:200|200~ => <span class="mock">~i:200|200~</span>)
+								</li>
+								<li>
+									image with exact width, random height:
+									<strong>~i:width|min_height,max_height~</strong><br>
+									(eg: ~i:200|100,150~ => <span class="mock">~i:200|100,150~</span>)
+								</li>
+								<li>
+									image with random width, exact height:
+									<strong>~i:min_width,max_width|height~</strong><br>
+									(eg: ~i:100,300|100~ => <span class="mock">~i:100,300|100~</span>)
+								</li>
+								<li>
+									image with random width, random height:
+									<strong>~i:min_width,max_width|min_height,max_height~</strong><br>
+									(eg: ~i:200,300|100,150~ => <span class="mock">~i:200,300|100,150~</span>)
+								</li>
+								<li>
+									image with topic:
+									<strong>~i:min_width[,max_width]|min_height[,max_height]|keyword~</strong><br>
+									(eg: ~i:200,300|100,150|people~ => <span class="mock">~i:200,300|100,150|people~</span>)
+									<p><strong>Keyword can be:</strong>
+										<ul>
+											<li>abstract</li>
+											<li>animals</li>
+											<li>business</li>
+											<li>cats</li>
+											<li>city</li>
+											<li>food</li>
+											<li>night</li>
+											<li>life</li>
+											<li>fashion</li>
+											<li>people</li>
+											<li>nature</li>
+											<li>sports</li>
+											<li>technics</li>
+											<li>transport</li>
+										</ul>
+									</p>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<h3>Number</h3>
+							<ul>
+								<li>
+									interger number: <strong>~nb:min,max~</strong><br>
+									(eg: ~nb:100,1000~ => <span class="mock">~nb:100,1000~</span>)
+								</li>
+								<li>
+									float number: <strong>~nb:min,max|number_after_dot~</strong><br>
+									(eg: ~nb:100,1000|4~ => <span class="mock">~nb:100,1000|4~</span>)
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			</nomock>
+		</div>
+		<script type="text/javascript" src="scripts/mock.js"></script>
+	</body>
+</html>
